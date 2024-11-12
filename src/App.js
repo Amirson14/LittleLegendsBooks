@@ -30,7 +30,7 @@ const LandingPage = () => {
 
       <section id="about" className="about">
         <h2>About Us</h2>
-        <p>Little Legends is dedicated to creating unique, personalized stories for children, powered by advanced AI technology. Our mission is to foster a love for reading through engaging and customized narratives.</p>
+        <p>At Little Legends, we craft one-of-a-kind, personalized stories for children using cutting-edge AI technology. Our mission is to inspire a love for reading by creating engaging, custom-made tales that make every child the hero of their own adventure.</p>
       </section>
 
       <section id="features" className="features">
