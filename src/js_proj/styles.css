@@ -1,11 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
   font-family: 'Pacifico', cursive;
   background-color: #e0d3e8;
   color: #333;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.magical-text {
+  font-family: 'Baloo Bhai 2', cursive !important;
+  font-size: 2em;
+  color: #4b276a;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* Apply Frank Ruhl Libre to give a magical feel for kids */
@@ -34,12 +47,11 @@ body {
   align-items: center;
   background-color: transparent;
   position: relative;
-  box-sizing: border-box;
 }
 
 .logo-container {
   flex: 0 0 auto;
-  width: 400px;
+  width: 200px;
   display: flex;
   align-items: center;
 }
@@ -73,7 +85,6 @@ body {
   text-align: center;
   padding: 50px 20px;
   box-shadow: 0 4px 6px rgba(75, 39, 106, 0.1);
-  margin-top: 0;
 }
 
 .hero-content {
@@ -117,7 +128,6 @@ section {
   margin: 0 auto;
   padding: 30px 20px;
   text-align: center;
-  box-sizing: border-box;
 }
 
 section:not(:last-child) {
@@ -132,17 +142,30 @@ h2 {
 
 .feature-list, .testimonial-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
   gap: 20px;
   padding: 15px;
   margin: 0 auto;
 }
 
-.feature-item, .testimonial-item {
-  text-align: left;
-  padding: 15px;
-  background-color: rgba(255, 255, 255, 0.8);
+.feature-item {
+  font-family: 'Frank Ruhl Libre', sans-serif;
+  font-size: 1.1em;
+  line-height: 1.7; /* Adjusted for readability */
+  color: #4b276a;
+  text-align: right;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.features h2, .testimonials h2 {
+  font-family: 'Frank Ruhl Libre', sans-serif;
+  font-size: 2.5em;
+  color: #4b276a;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .feature-item h3 {
@@ -150,7 +173,7 @@ h2 {
 }
 
 .about {
-  text-align: center;
+  text-align: right;
   padding: 30px 20px;
 }
 
@@ -160,11 +183,13 @@ h2 {
   line-height: 1.6;
   font-size: 1.2em;
   font-weight: bold;
+  text-align: right;
 }
 
 .features {
   background-color: rgba(232, 224, 240, 0.5);
   padding: 30px 20px;
+  text-align: right;
 }
 
 .sample-gallery {
@@ -172,7 +197,6 @@ h2 {
   justify-content: center;
   gap: 15px;
   flex-wrap: wrap;
-  padding: 15px;
 }
 
 .sample-image {
@@ -187,7 +211,6 @@ h2 {
   transform: scale(1.05);
 }
 
-/* Testimonials Section */
 .testimonials {
   direction: rtl;
   text-align: right;
@@ -215,7 +238,6 @@ h2 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   direction: rtl;
   text-align: right;
-  font-family: 'Frank Ruhl Libre', sans-serif;
 }
 
 .contact {
@@ -260,4 +282,52 @@ h2 {
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .navigation a {
+    font-size: 1em;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1.2em;
+    padding: 0 10px;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+
+  .feature-list {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-item {
+    font-size: 1em;
+    padding: 15px;
+  }
+
+  section {
+    padding: 20px 10px;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  .about p {
+    font-size: 1em;
+    line-height: 1.5;
+  }
 }
