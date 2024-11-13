@@ -59,22 +59,24 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <section id="testimonials" className="testimonials">
-        <h2>What Our Customers Say</h2>
-        <div className="testimonial-list">
-          <div className="testimonial-item">
-            <p>"Little Legends created a magical experience for my child. The personalized story and images were beautifully crafted and will be cherished for years."</p>
-          </div>
-          <div className="testimonial-item">
-            <p>"The best gift ever for my kid!!"</p>
-          </div>
-          {/* Add more testimonials as needed */}
+          <section id="testimonials" className="testimonials">
+      <h2>לקוחות מספרים</h2>
+      <div className="testimonial-list">
+        <div className="testimonial-item">
+          <p>"ליטל לג'נדס יצרו חוויה קסומה עבור הילד שלי. הסיפור והתמונות המותאמות אישית היו מעוצבים בצורה מדהימה ויהיו מזכרת להרבה שנים."</p>
         </div>
-      </section>
+        <div className="testimonial-item">
+          <p>"ההתאמה האישית וההשקעה בפרטים פשוט מדהימים! הילד שלי מרגיש כמו גיבור אמיתי בספר שמיועד כולו לו. ליטל לג'נדס נתנו לנו מזכרת שתישאר איתנו לנצח"</p>
+        </div>
+        <div className="testimonial-item">
+          <p>"לראות את הפנים של הילד שלי מאירות כשהוא מזהה את עצמו בסיפור היה רגע מופלא. ליטל לג'נדס הכניסו התרגשות חדשה לשעת הקריאה, והפכו כל סיפור להרפתקה אישית"</p>
+        </div>
+      </div>
+    </section>
 
       <section id="contact" className="contact">
-        <h2>Contact Us</h2>
-        <p>Ready to create a personalized story for your child? Reach out to us at:</p>
+        <h2>דברו איתנו</h2>
+        <p>רוצים ליצור סיפור מותאם אישית עבור ילדכם? צרו איתנו קשר</p>
         <p>Email: <a href="mailto:littlelegends.cs@gmail.com">littlelegends.cs@gmail.com</a></p>
         <p>Phone: 050-2491316 / 052-4635060</p>
         <div className="qr-container">

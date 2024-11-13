@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&family=Amatic+SC:wght@700&display=swap');
+
 body {
   margin: 0;
   font-family: 'Pacifico', cursive;
@@ -5,6 +8,15 @@ body {
   color: #333;
 }
 
+/* Apply Frank Ruhl Libre to give a magical feel for kids */
+.hero h1,
+.hero p,
+.testimonials h2,
+.testimonial-item {
+  font-family: 'Frank Ruhl Libre', sans-serif; /* Apply the magical Hebrew font */
+}
+
+/* General styling remains the same */
 .landing-page {
   display: flex;
   flex-direction: column;
@@ -146,8 +158,8 @@ h2 {
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
-  font-size: 1.2em; /* Enlarge the text */
-  font-weight: bold; /* Bold the text */
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 .features {
@@ -175,16 +187,35 @@ h2 {
   transform: scale(1.05);
 }
 
+/* Testimonials Section */
 .testimonials {
-  background-color: rgba(232, 224, 240, 0.3);
+  direction: rtl;
+  text-align: right;
   padding: 30px 20px;
+  background-color: rgba(232, 224, 240, 0.3);
+  color: #4b276a;
+}
+
+.testimonials h2 {
+  font-size: 2.5em;
+  color: #4b276a;
+  text-align: center;
+  margin-bottom: 20px;
+  direction: rtl;
+  font-family: 'Frank Ruhl Libre', sans-serif;
 }
 
 .testimonial-item {
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 1.3em;
+  color: #4b276a;
+  line-height: 1.5;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  direction: rtl;
+  text-align: right;
+  font-family: 'Frank Ruhl Libre', sans-serif;
 }
 
 .contact {
@@ -216,83 +247,6 @@ h2 {
   background-color: #4b276a;
   color: #e8e0f0;
   margin-top: 20px;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .header {
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .logo-container {
-    width: 400px;
-  }
-  
-  .navigation {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .hero h1 {
-    font-size: 2.8em;
-  }
-
-  .hero p {
-    font-size: 1.4em;
-  }
-}
-
-@media (max-width: 768px) {
-  .logo-container {
-    width: 350px;
-  }
-
-  .navigation {
-    flex-wrap: wrap;
-  }
-
-  .navigation a {
-    margin: 5px 10px;
-  }
-
-  section {
-    padding: 20px;
-  }
-
-  .feature-list, .testimonial-list {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h1 {
-    font-size: 2.4em;
-  }
-
-  .hero p {
-    font-size: 1.2em;
-  }
-
-  h2 {
-    font-size: 2em;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo-container {
-    width: 300px;
-  }
-
-  .hero {
-    padding: 30px 15px;
-  }
-
-  .hero h1 {
-    font-size: 2em;
-  }
-
-  .sample-image {
-    width: 150px;
-  }
 }
 
 .qr-container {
