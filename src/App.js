@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import logo from './images/logo.png';
 import sampleBookCover from './images/sample-book-cover.jpg';
+import sampleBookCover2 from './images/sample-book-cover1.jpg';
 import qrCode from './images/QR.jpg';
 
 const LandingPage = () => {
@@ -55,6 +56,7 @@ const LandingPage = () => {
         <h2>Sample Works</h2>
         <div className="sample-gallery">
           <img src={sampleBookCover} alt="Sample Book Cover" className="sample-image" />
+          <img src={sampleBookCover2} alt="Sample Book Cover" className="sample-image" />
           {/* Add more sample images as needed */}
         </div>
       </section>
