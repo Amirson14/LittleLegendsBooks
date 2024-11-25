@@ -6,35 +6,23 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   margin: 0;
+  padding: 0;
   font-family: 'Pacifico', cursive;
   background-color: #e0d3e8;
   color: #333;
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-.magical-text {
-  font-family: 'Baloo Bhai 2', cursive !important;
-  font-size: 2em;
-  color: #4b276a;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-/* Apply Frank Ruhl Libre to give a magical feel for kids */
-.hero h1,
-.hero p,
-.testimonials h2,
-.testimonial-item {
-  font-family: 'Frank Ruhl Libre', sans-serif; /* Apply the magical Hebrew font */
-}
-
-/* General styling remains the same */
 .landing-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  min-height: 100%; /* Ensure it takes full viewport height */
+  padding-bottom: 100px; /* Add padding to ensure space for the QR code */
+  overflow-y: auto; /* Allow vertical scrolling */
 }
 
 .header {
@@ -46,7 +34,6 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
-  position: relative;
 }
 
 .logo-container {
@@ -92,7 +79,8 @@ body {
   margin: 0 auto;
 }
 
-.hero-content h1, .hero-content p {
+.hero-content h1,
+.hero-content p {
   color: #4b276a;
 }
 
@@ -135,14 +123,10 @@ section:not(:last-child) {
   margin-bottom: 20px;
 }
 
-h2 {
-  margin: 0 0 20px 0;
-  font-size: 2.2em;
-}
-
-.feature-list, .testimonial-list {
+.feature-list,
+.testimonial-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   padding: 15px;
   margin: 0 auto;
@@ -151,7 +135,7 @@ h2 {
 .feature-item {
   font-family: 'Frank Ruhl Libre', sans-serif;
   font-size: 1.1em;
-  line-height: 1.7; /* Adjusted for readability */
+  line-height: 1.7;
   color: #4b276a;
   text-align: right;
   padding: 20px;
@@ -160,7 +144,8 @@ h2 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.features h2, .testimonials h2 {
+.features h2,
+.testimonials h2 {
   font-family: 'Frank Ruhl Libre', sans-serif;
   font-size: 2.5em;
   color: #4b276a;
@@ -265,7 +250,7 @@ h2 {
 .footer {
   width: 100%;
   text-align: center;
-  padding: 15px 0;
+  padding: 20px 0;
   background-color: #4b276a;
   color: #e8e0f0;
   margin-top: 20px;
@@ -274,11 +259,15 @@ h2 {
 .qr-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100%;
   margin-top: 20px;
+  padding: 10px;
 }
 
 .qr-code {
-  width: 200px;
+  max-width: 200px;
+  width: 100%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -291,21 +280,15 @@ h2 {
     gap: 10px;
   }
 
-  .navigation a {
-    font-size: 1em;
-  }
-
   .hero h1 {
     font-size: 2em;
   }
 
   .hero p {
     font-size: 1.2em;
-    padding: 0 10px;
   }
 
   .cta-button {
-    padding: 10px 20px;
     font-size: 1em;
   }
 
@@ -313,21 +296,7 @@ h2 {
     grid-template-columns: 1fr;
   }
 
-  .feature-item {
-    font-size: 1em;
-    padding: 15px;
-  }
-
-  section {
-    padding: 20px 10px;
-  }
-
-  h2 {
-    font-size: 1.8em;
-  }
-
-  .about p {
-    font-size: 1em;
-    line-height: 1.5;
+  .qr-code {
+    max-width: 150px;
   }
 }
