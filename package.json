@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "cp -r ./src/* ./public/ && firebase deploy --only hosting:littlelegendsbooks"
+    "deploy": "xcopy src public /E /H /C /I /EXCLUDE:exclude.txt && firebase deploy --only hosting:littlelegendsbooks"
   },
   "eslintConfig": {
     "extends": [
