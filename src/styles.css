@@ -75,9 +75,8 @@ html, body {
 
 /* Mobile Styles */
 .menu-toggle {
-  display: none; /* Hidden by default */
+  display: none !important;
 }
-
 .hamburger-menu {
   display: none; /* Hidden by default */
   cursor: pointer;
@@ -365,5 +364,9 @@ section:not(:last-child) {
 
   .qr-code {
     max-width: 150px;
+  }
+
+  .hamburger-menu {
+    display: flex !important;
   }
 }
