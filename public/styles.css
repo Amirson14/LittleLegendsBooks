@@ -9,7 +9,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Pacifico', cursive;
+  font-family: cursive;
   background-color: #e0d3e8;
   color: #333;
   overflow-x: hidden; /* Prevent horizontal scrolling */
