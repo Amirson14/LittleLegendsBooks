@@ -265,6 +265,27 @@ section:not(:last-child) {
   transform: scale(1.05);
 }
 
+/* Lightbox styling */
+.lightbox {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+.lightbox img {
+  max-width: 80%; /* Restrict maximum width */
+  max-height: 80%; /* Restrict maximum height */
+  border-radius: 8px; /* Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
 .testimonials {
   direction: rtl;
   text-align: right;
@@ -440,3 +461,52 @@ iframe {
       height: 800px; /* Further increased height for very small screens */
   }
 }
+
+/* Banner Container */
+.banner-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #4b276a; /* Background color of the banner */
+  color: #e8e0f0; /* Text color */
+  font-family: 'Amatic SC', cursive; /* Font for the banner */
+  font-size: 2em; /* Font size for visibility */
+  font-weight: bold;
+  position: fixed; /* Fixed position to keep it at the top */
+  top: 0; /* Sticks the banner to the top */
+  z-index: 1000; /* Ensure it stays above all other elements */
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+/* Moving Banner */
+.moving-banner {
+  display: inline-block;
+  white-space: nowrap; /* Prevent line breaks */
+  animation: moveBanner 15s linear infinite; /* Continuous scrolling animation */
+  position: relative;
+  transform: translateX(0%); /* Start completely off-screen from the right */
+  will-change: transform; /* Optimize animation performance */
+}
+
+/* Spacing between text */
+.moving-banner span {
+  margin-left: 200px; /* Add spacing between texts */
+}
+
+/* Animation Keyframes */
+@keyframes moveBanner {
+  0%, 100% {
+    transform: translateX(100%); /* Start and end fully off-screen on the right */
+  }
+  50% {
+    transform: translateX(0%); /* Move fully off-screen on the left */
+  }
+}
+
+/* Add margin to body to prevent overlap with the banner */
+body {
+  margin-top: 50px; /* Adjust to the height of the banner */
+}
+
+

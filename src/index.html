@@ -27,6 +27,13 @@
             </nav>
         </header>
 
+        <div class="banner-container">
+            <div class="moving-banner">
+              <span>מחירי חנוכה מיוחדים! 🕎</span>
+              <span>כריכה רכה + מהדורה דיגיטלית במחיר משתלם</span>
+            </div>
+          </div>
+
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-content">
@@ -65,12 +72,17 @@
         <section id="samples" class="samples">
             <h2>ספרים לדוגמה</h2>
             <div class="sample-gallery">
-                <img src="images/sample-book-cover.jpg" alt="Sample Book Cover" class="sample-image">
-                <img src="images/sample-book-cover3.jpg" alt="Sample Book Cover" class="sample-image">
-                <img src="images/sample-book-cover2.jpg" alt="Sample Book Cover" class="sample-image">
-                <img src="images/sample-book-cover4.jpg" alt="Sample Book Cover" class="sample-image">
-                <img src="images/sample-book-cover9.jpg" alt="Sample Book Cover" class="sample-image">
-                <img src="images/sample-book-cover1.jpg" alt="Sample Book Cover" class="sample-image">
+              <img src="images/sample-book-cover.jpg" alt="Sample Book Cover" class="sample-image" onclick="openLightbox(this)">
+              <img src="images/sample-book-cover3.jpg" alt="Sample Book Cover" class="sample-image" onclick="openLightbox(this)">
+              <img src="images/sample-book-cover2.jpg" alt="Sample Book Cover" class="sample-image" onclick="openLightbox(this)">
+              <img src="images/sample-book-cover4.jpg" alt="Sample Book Cover" class="sample-image" onclick="openLightbox(this)">
+              <img src="images/sample-book-cover9.jpg" alt="Sample Book Cover" class="sample-image" onclick="openLightbox(this)">
+              <img src="images/sample-book-cover1.jpg" alt="Sample Book Cover" class="sample-image" onclick="openLightbox(this)">
+            </div>
+          
+            <!-- Lightbox -->
+            <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+              <img id="lightbox-img" src="" alt="Expanded Image">
             </div>
             <!-- Add the flipbook below -->
             <div class="flipbook-container">
