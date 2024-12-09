@@ -23,7 +23,7 @@ html, body {
   align-items: center;
   width: 100%;
   min-height: 100vh; /* Ensure it takes full viewport height */
-  padding-bottom: 100px; /* Add padding to ensure space for the QR code */
+  padding-bottom: 0; /* Remove the 100px padding */
   overflow-y: auto; /* Allow vertical scrolling */
 }
 
@@ -55,18 +55,18 @@ html, body {
 .navigation {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 8px;
   flex-shrink: 0;
 }
 
 .navigation a {
-  margin: 0 10px;
+  margin: 0 5px;
   color: #4b276a;
   text-decoration: none;
   font-weight: 600; /* Slightly bolder for better visibility */
   white-space: nowrap;
   font-size: 1.2em; /* Increase font size */
-  padding: 10px 15px; /* Add padding around the text */
+  padding: 8px 12px; /* Add padding around the text */
   line-height: 1.5; /* Adjust line height for better spacing */
 }
 
@@ -299,9 +299,15 @@ section:not(:last-child) {
   padding: 30px 20px;
 }
 
+.contact h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #4b276a;
+}
+
 .contact p {
   margin: 10px 0;
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-weight: bold;
 }
 
@@ -326,7 +332,8 @@ section:not(:last-child) {
   padding: 20px 0;
   background-color: #4b276a;
   color: #e8e0f0;
-  margin-top: 0; /* Ensure no extra margin at the top */
+  margin-top: auto; /* Push footer to bottom */
+  margin-bottom: 0; /* Ensure no margin at bottom */
 }
 
 .qr-container {
