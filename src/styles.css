@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&family=Amatic+SC:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Comic+Sans+MS:wght@700&display=swap'); /* Ensure ComicSansMS-Bold is available */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Sans+MS:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
 
 
 * {
@@ -14,7 +15,6 @@ html, body {
   background-color: #e0d3e8;
   color: #333;
   overflow-x: hidden; /* Prevent horizontal scrolling */
-  height: 100%
 }
 
 .landing-page {
@@ -22,15 +22,16 @@ html, body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  min-height: 100vh; /* Ensure it takes full viewport height */
-  padding-bottom: 0; /* Remove the 100px padding */
-  overflow-y: auto; /* Allow vertical scrolling */
+  min-height: 100vh; 
+  /* Remove overflow: visible; */
+  padding-top: 50px; /* To account for the fixed banner height */
+  margin-top: 0; 
 }
 
 .header {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 30px auto 0; /* Reduced from 50px */
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
@@ -65,7 +66,8 @@ html, body {
   text-decoration: none;
   font-weight: 600; /* Slightly bolder for better visibility */
   white-space: nowrap;
-  font-size: 1.2em; /* Increase font size */
+  font-family: 'Amatic SC', sans-serif;
+  font-size: 1.6em; /* Increase font size */
   padding: 8px 12px; /* Add padding around the text */
   line-height: 1.5; /* Adjust line height for better spacing */
 }
@@ -151,6 +153,7 @@ html, body {
 .hero-content h1,
 .hero-content p {
   color: #4b276a;
+  font-family: 'Amatic SC', sans-serif;
 }
 
 .hero h1 {
@@ -215,8 +218,7 @@ section:not(:last-child) {
 
 .features h2,
 .testimonials h2 {
-  font-family: 'Frank Ruhl Libre', sans-serif;
-  font-size: 2.5em;
+  font-family: 'Amatic SC', sans-serif;  font-size: 2.5em;
   color: #4b276a;
   text-align: center;
   margin-bottom: 20px;
@@ -300,7 +302,7 @@ section:not(:last-child) {
   text-align: center;
   margin-bottom: 20px;
   direction: rtl;
-  font-family: 'Frank Ruhl Libre', sans-serif;
+  font-family: 'Amatic SC', sans-serif;
 }
 
 .testimonial-item {
@@ -466,73 +468,91 @@ iframe {
 .banner-container {
   width: 100%;
   overflow: hidden;
-  background-color: #4b276a; /* Background color of the banner */
-  color: #e8e0f0; /* Text color */
-  font-family: 'Amatic SC', cursive; /* Font for the banner */
-  font-size: 2em; /* Font size for visibility */
+  background-color: #4b276a;
+  color: #e8e0f0;
+  font-family: 'Amatic SC', sans-serif;
+  font-size: 2em;
   font-weight: bold;
-  position: fixed; /* Make it fixed at the top */
-  top: 0; /* Stick to the top of the page */
-  height: 50px; /* Default banner height */
+  position: fixed;
+  top: 0;
+  height: 50px;
   display: flex;
   align-items: center;
-  z-index: 1000; /* Ensure it's above all content */
-  white-space: nowrap; /* Prevent text wrapping */
+  z-index: 9999;
+  white-space: nowrap;
 }
 
-/* Moving Banner */
 .moving-banner {
-  display: flex; /* Use flex for consistent spacing */
-  white-space: nowrap; /* Prevent line breaks */
-  animation: moveBanner 15s linear infinite; /* Continuous scrolling animation */
-  will-change: transform; /* Optimize animation performance */
+  display: inline-flex;
+  animation: moveBanner 20s linear infinite;
 }
 
-/* Spacing between text */
 .moving-banner span {
-  margin-right: 200px; /* Add spacing between texts */
+  display: inline-block;
+  padding-right: 50px;
 }
 
 /* Animation Keyframes */
 @keyframes moveBanner {
-  0%, 100% {
-    transform: translateX(100%); /* Start and end fully off-screen on the right */
+  0% {
+    transform: translateX(100%); /* Start from right edge */
   }
-  50% {
-    transform: translateX(0%); /* Move fully off-screen on the left */
+  100% {
+    transform: translateX(-100%); /* Move to left edge */
   }
 }
 
 /* Add margin to body to prevent overlap with the banner */
 body {
-  margin-top: 50px; /* Adjust to the height of the banner */
+  margin: 0; /* Make sure there's no top margin on the body */
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .banner-container {
-    height: 40px; /* Slightly smaller height for mobile */
-    font-size: 1.5em; /* Adjust font size for mobile */
-    justify-content: center; /* Center the text */
+    height: 40px;
+    font-size: 1.2em; /* Reduced font size for better fit */
+    display: flex; /* Ensure flexbox is used */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    padding: 0 10px; /* Add padding to prevent text touching edges */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    margin-top: 0; /* Remove margin to reduce gap */
+    margin-left: 20px; /* Increase left margin to move banner further right */
   }
 
   .moving-banner {
-    animation: none; /* Disable the animation */
-    transform: none; /* Ensure the text is static */
+    animation: none;
+    transform: none;
+    width: auto; /* Adjust width to fit content */
+    justify-content: center; /* Center the content */
+    flex-wrap: wrap; /* Allow text to wrap if needed */
+    white-space: normal; /* Allow text to wrap */
   }
 
   .moving-banner span {
-    margin-right: 20px; /* Adjust spacing between texts for better appearance */
+    margin-right: 5px; /* Reduce spacing between texts */
+    margin-left: 5px; /* Add left margin for spacing */
+    text-align: center; /* Center the text */
   }
 }
 
 @media (max-width: 480px) {
   .banner-container {
-    height: 35px;
-    font-size: 1.2em;
+    height: auto; /* Allow height to adjust based on content */
+    min-height: 35px;
+    font-size: 1em; /* Further reduce font size */
+    padding: 5px 10px; /* Add vertical padding */
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    margin-top: 20px; /* Reduced from 50px to match mobile banner height */
   }
 
-  .moving-banner span {
-    margin-right: 30px;
+  .landing-page {
+    min-height: calc(100vh - 40px); /* Adjust to match new banner height */
+    margin-top: -5px; /* Add negative margin to reduce gap */
   }
 }
