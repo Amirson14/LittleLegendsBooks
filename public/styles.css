@@ -471,27 +471,26 @@ iframe {
   font-family: 'Amatic SC', cursive; /* Font for the banner */
   font-size: 2em; /* Font size for visibility */
   font-weight: bold;
-  position: fixed; /* Fixed position to keep it at the top */
-  top: 0; /* Sticks the banner to the top */
-  z-index: 1000; /* Ensure it stays above all other elements */
-  height: 50px;
+  position: fixed; /* Make it fixed at the top */
+  top: 0; /* Stick to the top of the page */
+  height: 50px; /* Default banner height */
   display: flex;
   align-items: center;
+  z-index: 1000; /* Ensure it's above all content */
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
 /* Moving Banner */
 .moving-banner {
-  display: inline-block;
+  display: flex; /* Use flex for consistent spacing */
   white-space: nowrap; /* Prevent line breaks */
   animation: moveBanner 15s linear infinite; /* Continuous scrolling animation */
-  position: relative;
-  transform: translateX(0%); /* Start completely off-screen from the right */
   will-change: transform; /* Optimize animation performance */
 }
 
 /* Spacing between text */
 .moving-banner span {
-  margin-left: 200px; /* Add spacing between texts */
+  margin-right: 200px; /* Add spacing between texts */
 }
 
 /* Animation Keyframes */
@@ -509,4 +508,31 @@ body {
   margin-top: 50px; /* Adjust to the height of the banner */
 }
 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .banner-container {
+    height: 40px; /* Slightly smaller height for mobile */
+    font-size: 1.5em; /* Adjust font size for mobile */
+    justify-content: center; /* Center the text */
+  }
 
+  .moving-banner {
+    animation: none; /* Disable the animation */
+    transform: none; /* Ensure the text is static */
+  }
+
+  .moving-banner span {
+    margin-right: 20px; /* Adjust spacing between texts for better appearance */
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-container {
+    height: 35px;
+    font-size: 1.2em;
+  }
+
+  .moving-banner span {
+    margin-right: 30px;
+  }
+}
