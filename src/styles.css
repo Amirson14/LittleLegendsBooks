@@ -14,6 +14,7 @@ html, body {
   background-color: #e0d3e8;
   color: #333;
   overflow-x: hidden; /* Prevent horizontal scrolling */
+  height: 100%
 }
 
 .landing-page {
@@ -21,7 +22,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  min-height: 100%; /* Ensure it takes full viewport height */
+  min-height: 100vh; /* Ensure it takes full viewport height */
   padding-bottom: 100px; /* Add padding to ensure space for the QR code */
   overflow-y: auto; /* Allow vertical scrolling */
 }
@@ -62,15 +63,17 @@ html, body {
   margin: 0 10px;
   color: #4b276a;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600; /* Slightly bolder for better visibility */
   white-space: nowrap;
+  font-size: 1.2em; /* Increase font size */
+  padding: 10px 15px; /* Add padding around the text */
+  line-height: 1.5; /* Adjust line height for better spacing */
 }
 
-/* General Navigation Reset */
-.navigation {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+/* Optional hover effect for a more interactive feel */
+.navigation a:hover {
+  color: #5d3282; /* Change color on hover */
+  text-decoration: underline; /* Underline on hover */
 }
 
 /* Mobile Styles */
@@ -313,13 +316,17 @@ section:not(:last-child) {
   text-decoration: underline;
 }
 
+.content {
+  flex: 1; /* Fills the remaining space to push footer down */
+}
+
 .footer {
   width: 100%;
   text-align: center;
   padding: 20px 0;
   background-color: #4b276a;
   color: #e8e0f0;
-  margin-top: 20px;
+  margin-top: 0; /* Ensure no extra margin at the top */
 }
 
 .qr-container {
