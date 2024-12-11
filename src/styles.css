@@ -154,7 +154,6 @@ html, body {
 .hero-content p {
   color: #4b276a;
   font-family: 'Amatic SC', sans-serif;
-  font-size: 3.2em;
 }
 
 .hero h1 {
@@ -431,7 +430,7 @@ section:not(:last-child) {
   max-width: 800px; /* Restrict maximum width for larger screens */
   margin: 20px auto; /* Center the form */
   padding: 10px;
-  background-color: #f7f5fa; /* Optional: Add a subtle background color */
+  background-color: #e1d8f0; /* Optional: Add a subtle background color */
   border-radius: 10px; /* Optional: Rounded corners */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
 }
