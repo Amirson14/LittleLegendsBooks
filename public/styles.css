@@ -346,6 +346,27 @@ section:not(:last-child) {
   text-decoration: underline;
 }
 
+.whatsapp-link {
+  color: #4b276a; /* Text color */
+  text-decoration: none;
+  font-size: 1.2em; /* Adjust font size */
+  display: inline-flex;
+  align-items: center; /* Align text and icon vertically */
+  gap: 8px; /* Space between text and icon */
+  margin-bottom: 10px;
+}
+
+.whatsapp-icon {
+  width: 24px; /* Adjust icon size */
+  height: 24px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-link:hover .whatsapp-icon {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
 .content {
   flex: 1; /* Fills the remaining space to push footer down */
 }
