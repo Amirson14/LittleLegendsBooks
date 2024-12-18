@@ -657,3 +657,39 @@ body {
         padding: 10px;
     }
 }
+
+/* Enhanced CTA Button for Books Page */
+.books-list .cta-button {
+    background-color: #ff6b6b; /* Bright, attention-grabbing color */
+    color: white;
+    padding: 15px 35px;
+    font-size: 1.5em;
+    margin: 40px auto;
+    display: block;
+    max-width: 300px;
+    text-align: center;
+    border-radius: 50px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+    animation: pulse 2s infinite;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.books-list .cta-button:hover {
+    background-color: #ff5252;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
