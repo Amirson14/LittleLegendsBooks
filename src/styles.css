@@ -458,8 +458,8 @@ section:not(:last-child) {
 
 
 .google-form-container {
-  margin-bottom: 30px; /* Space below the form */
-  height: auto; /* Ensure the height adjusts dynamically */
+  background-color: #dfd3e8; /* White background */
+  margin-bottom: 40px; /* Space below the form */
 }
 
 iframe {
