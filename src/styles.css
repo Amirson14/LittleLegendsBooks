@@ -784,3 +784,33 @@ body {
         max-width: 100%;
     }
 }
+
+.related-products .product-item h3 {
+    font-family: 'Amatic SC', sans-serif; /* Use the same font as other headings */
+    font-size: 1.6em; /* Match the font size used in other sections */
+    color: #4b276a; /* Consistent color */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.related-products .product-item p {
+    font-family: 'Frank Ruhl Libre', sans-serif; /* Use a consistent font for paragraphs */
+    font-size: 1.1em; /* Match the font size used in other sections */
+    color: #4b276a; /* Consistent color */
+    line-height: 1.5; /* Improve readability */
+    margin: 0 10px; /* Add margin for spacing */
+}
+
+/* Ensure all product images have consistent styling */
+.related-products .product-image {
+    width: 100%; /* Ensure it uses the full width of its container */
+    max-width: 180px; /* Set a maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    margin: 10px; /* Add margin for spacing */
+}
+
+.related-products .product-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
