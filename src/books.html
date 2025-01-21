@@ -6,6 +6,29 @@
     <title>Little Legends - רשימת הספרים שלנו</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
 </head>
 <body>
     <div class="landing-page">
@@ -31,91 +54,120 @@
             <div class="books-grid">
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/אחות גדולה.jpg" alt="כריכת הספר">
+                        <img src="images/אחות גדולה.jpg" alt="כריכת הספר" onclick="openLightbox(this)">
                     </div>
                     <h3>אחות גדולה</h3>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/מנורת הקסמים.jpg" alt="כריכת הספר">
+                        <img src="images/מנורת הקסמים.jpg" alt="כריכת הספר" onclick="openLightbox(this)">
                     </div>
                     <h3>מנורת הקסמים</h3>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/אביר הגלקסיה.jpg" alt="כריכת הספר">
+                        <img src="images/אביר הגלקסיה.jpg" alt="כריכת הספר" onclick="openLightbox(this)">
                     </div>
                     <h3>אביר הגלקסיה</h3>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/פיית השיניים.jpg" alt="כריכת הספר">
+                        <img src="images/פיית השיניים.jpg" alt="כריכת הספר" onclick="openLightbox(this)">
                     </div>
                     <h3>פיית השיניים</h3>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/יום הולדת.jpg" alt="כריכת הספר">
+                        <img src="images/יום הולדת.jpg" alt="כריכת הספר" onclick="openLightbox(this)">
                     </div>
                     <h3>יום הולדת</h3>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/אלוף הכוכבים BRAWL STARTS.jpg" alt="כריכת הספר">
+                        <img src="images/אלוף הכוכבים BRAWL STARTS.jpg" alt="כריכת הספר" onclick="openLightbox(this)">
                     </div>
                     <h3>אלוף הכוכבים BRAWL STARS</h3>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/מסע למצרים.jpg" alt="כריכת הספר">
+                        <img src="images/מסע למצרים.jpg" alt="כריכת הספר" onclick="openLightbox(this)">
                     </div>
                     <h3>המסע למצרים</h3>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/גיבור על.jpg" alt="כריכת הספר">
+                        <img src="images/גיבור על.jpg" alt="כריכת הספר" onclick="openLightbox(this)">
                     </div>
                     <h3>גיבור העל</h3>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/קשת הצבעים והרגשות.jpg" alt="כריכת הספר">
+                        <img src="images/קשת הצבעים והרגשות.jpg" alt="כריכת הספר" onclick="openLightbox(this)">
                     </div>
                     <h3>קשת הצבעים והרגשות</h3>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/גיבור השחמט.jpg" alt="כריכת הספר">
+                        <img src="images/גיבור השחמט.jpg" alt="כריכת הספר" onclick="openLightbox(this)">
                     </div>
                     <h3>גיבור השחמט</h3>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/כוח השיתוף.jpg" alt="כריכת הספר">
+                        <img src="images/כוח השיתוף.jpg" alt="כריכת הספר" onclick="openLightbox(this)">
                     </div>
                     <h3>כוח השיתוף</h3>
                 </div>
                 
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/גול החלומות.jpg" alt="כריכת הספר">
+                        <img src="images/גול החלומות.jpg" alt="כריכת הספר" onclick="openLightbox(this)">
                     </div>
                     <h3>גול החלומות</h3>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/הסל המנצח.jpg" alt="כריכת הספר">
+                        <img src="images/הסל המנצח.jpg" alt="כריכת הספר" onclick="openLightbox(this)">
                     </div>
                     <h3>הסל המנצח</h3>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/קסם הבלט.jpg" alt="כריכת הספר">
+                        <img src="images/קסם הבלט.jpg" alt="כריכת הספר" onclick="openLightbox(this)">
                     </div>
                     <h3>קסם הבלט</h3>
                 </div>
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="images/התמודדות עם אלרגיה.jpg" alt="כריכת הספר" onclick="openLightbox(this)">
+                    </div>
+                    <h3>התמודדות עם אלרגיה</h3>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="images/הריקוד המושלם.jpg" alt="כריכת הספר" onclick="openLightbox(this)">
+                    </div>
+                    <h3>הריקוד המושלם</h3>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="images/עולים לכיתה א'.jpg" alt="כריכת הספר" onclick="openLightbox(this)">
+                    </div>
+                    <h3>'עולים לכיתה א</h3>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="images/נסיכת הקרח.jpg" alt="כריכת הספר" onclick="openLightbox(this)">
+                    </div>
+                    <h3>נסיכת הקרח</h3>
+                </div>
             </div>
 
+            <!-- Lightbox -->
+            <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+                <img id="lightbox-img" src="" alt="תמונה מוגדלת">
+            </div>
+            
             <a href="index.html#contact" class="cta-button">!!אני רוצה כזה</a>
         </section>
 
@@ -124,5 +176,17 @@
         </footer>
     </div>
     <script src="script.js"></script>
+    <script>
+        function openLightbox(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = 'block';
+            lightboxImg.src = img.src;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
 </body>
 </html> 
