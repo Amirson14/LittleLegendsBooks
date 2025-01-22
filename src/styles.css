@@ -535,15 +535,14 @@ body {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .banner-container {
+    width: 100%; /* Ensure full width */
     height: 40px;
-    font-size: 1.2em; /* Reduced font size for better fit */
+    font-size: 1.2em; /* Adjust font size for better fit */
     display: flex; /* Ensure flexbox is used */
     justify-content: center; /* Center the content horizontally */
     align-items: center; /* Center the content vertically */
     padding: 0 10px; /* Add padding to prevent text touching edges */
-    overflow-x: auto; /* Allow horizontal scrolling if needed */
-    margin-top: 0; /* Remove margin to reduce gap */
-    margin-left: 20px; /* Increase left margin to move banner further right */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
   }
 
   .moving-banner {
@@ -813,4 +812,20 @@ body {
 
 .related-products .product-image:hover {
     transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Arrange placemats images in two columns on mobile */
+@media (max-width: 768px) {
+    .product-images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        gap: 10px; /* Space between images */
+    }
+}
+
+.related-products .product-list {
+    display: flex; /* Use flexbox to arrange items side by side */
+    justify-content: space-around; /* Space items evenly */
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+    gap: 20px; /* Add space between items */
 }
