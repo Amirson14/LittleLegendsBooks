@@ -829,3 +829,12 @@ body {
     flex-wrap: wrap; /* Allow items to wrap if needed */
     gap: 20px; /* Add space between items */
 }
+
+.related-products .large-perfume-image {
+    max-width: 250px; /* Increase the max-width */
+    transition: transform 0.3s ease; /* Ensure smooth transition */
+}
+
+.related-products .large-perfume-image:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
