@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Legends - פלייסמטים מעוצבים</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-page">
+        <header class="header">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Little Legends - פלייסמטים מעוצבים" class="logo">
+                </a>
+            </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav class="navigation">
+                <a href="index.html">חזרה לדף הבית</a>
+            </nav>
+        </header>
+
+        <section class="books-list">
+            <h1>הפלייסמטים שלנו</h1>
+            <div class="books-grid">
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="images/1.png" alt="פליימסט מעוצב" onclick="openLightbox(this)">
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="images/placemats2.jpg" alt="פליימסט מעוצב" onclick="openLightbox(this)">
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="images/placemats3.jpg" alt="פליימסט מעוצב" onclick="openLightbox(this)">
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="images/placemats3.png" alt="פליימסט מעוצב" onclick="openLightbox(this)">
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="images/4.png" alt="פליימסט מעוצב" onclick="openLightbox(this)">
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="images/5.png" alt="פליימסט מעוצב" onclick="openLightbox(this)">
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="images/6.png" alt="פליימסט מעוצב" onclick="openLightbox(this)">
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="images/7.png" alt="פליימסט מעוצב" onclick="openLightbox(this)">
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="images/2.png" alt="פליימסט מעוצב" onclick="openLightbox(this)">
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="images/3.png" alt="פליימסט מעוצב" onclick="openLightbox(this)">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lightbox -->
+            <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+                <img id="lightbox-img" src="" alt="תמונה מוגדלת">
+            </div>
+            
+            <a href="index.html#contact" class="cta-button">!!אני רוצה כזה</a>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; <span id="current-year"></span> Little Legends. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        function openLightbox(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = 'block';
+            lightboxImg.src = img.src;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+</body>
+</html> 
