@@ -616,8 +616,6 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 20px;
 }
 
@@ -654,9 +652,37 @@ body {
 
 @media (max-width: 768px) {
     .books-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        display: flex; /* Change to flex for mobile */
+        flex-direction: column; /* Stack items vertically */
         gap: 20px;
         padding: 10px;
+    }
+
+    .book-card {
+        width: 100%; /* Full width on mobile */
+        margin: 0 0 15px 0; /* Add bottom margin for spacing */
+    }
+
+    .book-image {
+        width: 100%;
+        max-height: 250px; /* Maintain reasonable image height */
+        object-fit: contain;
+    }
+
+    .book-details {
+        padding: 10px 5px;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+    .books-grid {
+        gap: 15px;
+        padding: 5px;
+    }
+
+    .book-card {
+        margin: 0 0 10px 0;
     }
 }
 
@@ -853,3 +879,4 @@ body {
         gap: 10px; /* Space between images */
     }
 }
+
