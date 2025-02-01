@@ -799,7 +799,23 @@ body {
     margin: 0 10px; /* Add margin for spacing */
 }
 
-/* Ensure all product images have consistent styling */
+.related-products .product-list {
+  display: flex; /* Use flexbox to arrange items side by side */
+  justify-content: space-around; /* Space items evenly */
+  flex-wrap: wrap; /* Allow items to wrap if needed */
+  gap: 20px; /* Add space between items */
+}
+
+/* Make sure images and text are aligned on the same line */
+.related-products .product-container,
+.related-products .large-perfume-container {
+    display: flex; /* Align image and text horizontally */
+    flex-direction: column; /* Stack image above text */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center; /* Center text */
+}
+
 .related-products .product-image {
     width: 100%; /* Ensure it uses the full width of its container */
     max-width: 180px; /* Set a maximum width */
@@ -807,27 +823,17 @@ body {
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     transition: transform 0.3s ease; /* Smooth transition for hover effect */
-    margin: 10px; /* Add margin for spacing */
+    margin-bottom: 10px; /* Add margin for spacing between image and text */
 }
 
 .related-products .product-image:hover {
     transform: scale(1.05); /* Slight zoom on hover */
 }
 
-/* Arrange placemats images in two columns on mobile */
-@media (max-width: 768px) {
-    .product-images {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Two columns */
-        gap: 10px; /* Space between images */
-    }
-}
-
-.related-products .product-list {
-    display: flex; /* Use flexbox to arrange items side by side */
-    justify-content: space-around; /* Space items evenly */
-    flex-wrap: wrap; /* Allow items to wrap if needed */
-    gap: 20px; /* Add space between items */
+.related-products .product-text {
+    margin-top: 5px; /* Space between image and text */
+    font-size: 14px; /* Adjust text size if needed */
+    text-align: center; /* Ensure text is centered */
 }
 
 .related-products .large-perfume-image {
@@ -837,4 +843,13 @@ body {
 
 .related-products .large-perfume-image:hover {
     transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Arrange placemats images in two columns on mobile */
+@media (max-width: 768px) {
+    .product-images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        gap: 10px; /* Space between images */
+    }
 }

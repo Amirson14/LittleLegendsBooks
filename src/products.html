@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Legends - מוצרים נוספים שלנו</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .books-container {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .book-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .book-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .book-details {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .book-details h2 {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .book-details p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .order-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: #4a90e2;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background 0.3s ease;
+        }
+
+        .order-button:hover {
+            background: #357abd;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-page">
+        <header class="header">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Little Legends Logo" class="logo">
+                </a>
+            </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav class="navigation">
+                <a href="index.html">חזרה לדף הבית</a>
+            </nav>
+        </header>
+
+        <main class="books-container" style="direction: rtl;">
+            <h1>המוצרים שלנו</h1>
+            
+            <!-- Products Grid -->
+            <div class="books-grid">
+                <!-- Pillows Bundle -->
+                <div class="book-card">
+                    <img src="images/pillow.jpg" alt="באנדל ציפיות" class="book-image" onclick="openLightbox(this)">
+                    <div class="book-details">
+                        <h2>באנדל ציפיות לכריות וספר</h2>
+                        <p>באנדל מיוחד הכולל ספר מותאם אישית וציפית לכרית מעוצבת</p>
+                        <a href="index.html#contact" class="order-button">להזמנה</a>
+                    </div>
+                </div>
+
+                <!-- Perfume Bundle -->
+                <div class="book-card">
+                    <img src="images/perfume.jpg" alt="באנדל בושם" class="book-image" onclick="openLightbox(this)">
+                    <div class="book-details">
+                        <h2>באנדל ספר ובושם</h2>
+                        <p>באנדל ייחודי הכולל ספר מותאם אישית ובושם בעיצוב מיוחד</p>
+                        <a href="index.html#contact" class="order-button">להזמנה</a>
+                    </div>
+                </div>
+
+                <!-- Placemats -->
+                <div class="book-card">
+                    <img src="images/placemats1.png" alt="פלייסמטים" class="book-image" onclick="openLightbox(this)">
+                    <div class="book-details">
+                        <h2>פלייסמטים בעיצוב אישי</h2>
+                        <p>פלייסמטים מעוצבים עם דמויות מותאמות אישית</p>
+                        <a href="index.html#contact" class="order-button">להזמנה</a>
+                    </div>
+                </div>
+
+                <!-- Bottles Bundle -->
+                <div class="book-card">
+                    <img src="images/bottles.jpg" alt="באנדל בקבוק" class="book-image" onclick="openLightbox(this)">
+                    <div class="book-details">
+                        <h2> בקבוק מעוצב </h2>
+                        <p> בקבוק איכותי מעוצב עם דמויות מותאמות אישית </p>
+                        <a href="index.html#contact" class="order-button">להזמנה</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lightbox -->
+            <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+                <img id="lightbox-img" src="" alt="תמונה מוגדלת">
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; <span id="current-year"></span> Little Legends. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        function openLightbox(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = 'block';
+            lightboxImg.src = img.src;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
