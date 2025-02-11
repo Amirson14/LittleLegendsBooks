@@ -446,6 +446,9 @@ section:not(:last-child) {
   border: none;
   border-radius: 8px;
 }
+.remove-overflow.google-form-container {
+  /* overflow: hidden  */
+};
 
 .google-form-container {
   max-width: 800px; /* Restrict maximum width for larger screens */
