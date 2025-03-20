@@ -21,12 +21,29 @@
 
         .lightbox img {
             max-width: 90%;
-            max-height: 90%;
+            max-height: 90vh;
             margin: auto;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            object-fit: contain;
+        }
+
+        .book-cover {
+            height: 300px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white; /* Add white background to fill gaps */
+        }
+
+        .book-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block; /* Remove inline spacing */
         }
     </style>
 </head>
@@ -54,77 +71,77 @@
             <div class="books-grid">
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/1.png" alt="פליימסט מעוצב" onclick="openLightbox(this)">
+                        <img src="images/1.png" alt="פליימסט מעוצב" onclick="openLightbox(this)" loading="lazy">
                     </div>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/placemats2.jpg" alt="פליימסט מעוצב" onclick="openLightbox(this)">
+                        <img src="images/placemats2.jpg" alt="פליימסט מעוצב" onclick="openLightbox(this)" loading="lazy">
                     </div>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/placemats3.jpg" alt="פליימסט מעוצב" onclick="openLightbox(this)">
+                        <img src="images/placemats3.jpg" alt="פליימסט מעוצב" onclick="openLightbox(this)" loading="lazy">
                     </div>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/placemats3.png" alt="פליימסט מעוצב" onclick="openLightbox(this)">
+                        <img src="images/placemats3.png" alt="פליימסט מעוצב" onclick="openLightbox(this)" loading="lazy">
                     </div>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/4.png" alt="פליימסט מעוצב" onclick="openLightbox(this)">
+                        <img src="images/4.png" alt="פליימסט מעוצב" onclick="openLightbox(this)" loading="lazy">
                     </div>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/5.png" alt="פליימסט מעוצב" onclick="openLightbox(this)">
+                        <img src="images/5.png" alt="פליימסט מעוצב" onclick="openLightbox(this)" loading="lazy">
                     </div>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/6.png" alt="פליימסט מעוצב" onclick="openLightbox(this)">
+                        <img src="images/6.png" alt="פליימסט מעוצב" onclick="openLightbox(this)" loading="lazy">
                     </div>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/7.png" alt="פליימסט מעוצב" onclick="openLightbox(this)">
+                        <img src="images/7.png" alt="פליימסט מעוצב" onclick="openLightbox(this)" loading="lazy">
                     </div>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/2.png" alt="פליימסט מעוצב" onclick="openLightbox(this)">
+                        <img src="images/2.png" alt="פליימסט מעוצב" onclick="openLightbox(this)" loading="lazy">
                     </div>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/3.png" alt="פליימסט מעוצב" onclick="openLightbox(this)">
+                        <img src="images/3.png" alt="פליימסט מעוצב" onclick="openLightbox(this)" loading="lazy">
                     </div>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/8.png" alt="פליימסט מעוצב" onclick="openLightbox(this)">
+                        <img src="images/8.png" alt="פליימסט מעוצב" onclick="openLightbox(this)" loading="lazy">
                     </div>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/9.png" alt="פליימסט מעוצב" onclick="openLightbox(this)">
+                        <img src="images/9.png" alt="פליימסט מעוצב" onclick="openLightbox(this)" loading="lazy">
                     </div>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/10.png" alt="פליימסט מעוצב" onclick="openLightbox(this)">
+                        <img src="images/10.png" alt="פליימסט מעוצב" onclick="openLightbox(this)" loading="lazy">
                     </div>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/11.png" alt="פליימסט מעוצב" onclick="openLightbox(this)">
+                        <img src="images/11.png" alt="פליימסט מעוצב" onclick="openLightbox(this)" loading="lazy">
                     </div>
                 </div>
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="images/12.png" alt="פליימסט מעוצב" onclick="openLightbox(this)">
+                        <img src="images/12.png" alt="פליימסט מעוצב" onclick="openLightbox(this)" loading="lazy">
                     </div>
                 </div>
             </div>
