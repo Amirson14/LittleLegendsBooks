@@ -446,9 +446,6 @@ section:not(:last-child) {
   border: none;
   border-radius: 8px;
 }
-.remove-overflow.google-form-container {
-  /* overflow: hidden  */
-};
 
 .google-form-container {
   max-width: 800px; /* Restrict maximum width for larger screens */
@@ -562,6 +559,14 @@ body {
     margin-left: 5px; /* Add left margin for spacing */
     text-align: center; /* Center the text */
   }
+}
+
+.faq-item {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
 }
 
 @media (max-width: 480px) {
