@@ -28,3 +28,5 @@ yarn-error.log*
 firebase.js
 
 .cursorrules
+
+.firebase/
