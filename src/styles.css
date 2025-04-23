@@ -229,17 +229,35 @@ section:not(:last-child) {
 }
 
 .about {
-  text-align: right;
-  padding: 30px 20px;
+  text-align: center;
+  padding: 40px 20px;
+  direction: rtl;
+  margin: 20px auto;
+}
+
+.about h2 {
+  color: #4b276a;
+  font-family: 'Amatic SC', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 25px;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .about p {
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.8;
   font-size: 1.2em;
-  font-weight: bold;
-  text-align: right;
+  margin-bottom: 15px;
+  font-family: 'Frank Ruhl Libre', sans-serif;
+  color: #4b276a;
+}
+
+.about p:last-child {
+  margin-bottom: 0;
 }
 
 .features {
