@@ -198,9 +198,10 @@ section:not(:last-child) {
 .feature-list,
 .testimonial-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  padding: 30px 20px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -218,10 +219,19 @@ section:not(:last-child) {
 
 .features h2,
 .testimonials h2 {
-  font-family: 'Amatic SC', sans-serif;  font-size: 2.5em;
+  font-family: 'Amatic SC', sans-serif;
+  font-size: 3em;
   color: #4b276a;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.testimonials h2::before {
+  content: "📝";
+  font-size: 1.2em;
 }
 
 .feature-item h3 {
@@ -324,15 +334,17 @@ section:not(:last-child) {
 }
 
 .testimonial-item {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 20px;
-  border-radius: 8px;
-  font-size: 1.3em;
+  background-color: #ffffff;
+  padding: 25px 20px;
+  border-radius: 12px;
+  font-size: 1.2em;
   color: #4b276a;
-  line-height: 1.5;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  direction: rtl;
-  text-align: right;
+  line-height: 1.7;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease;
+}
+.testimonial-item:hover {
+  transform: translateY(-5px);
 }
 
 .contact {
@@ -834,32 +846,6 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-}
-
-.testimonial-video-container {
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial-video-container video {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Update responsive styles */
-@media (max-width: 768px) {
-    .testimonial-row {
-        grid-template-columns: 1fr;
-    }
-
-    .testimonial-video-container {
-        max-width: 100%;
-    }
 }
 
 .related-products .product-item h3 {
