@@ -10,7 +10,7 @@
     "redirects": [
       {
         "source": "/**",
-        "destination": "https://littlelegendsdesign.vercel.app/:splat",
+        "destination": "https://littlelegendsdesign.vercel.app/",
         "type": 301
       }
     ],
